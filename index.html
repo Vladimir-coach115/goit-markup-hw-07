@@ -19,6 +19,8 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/tablet.css" />
+    <link rel="stylesheet" href="./css/desktop.css" />
   </head>
   <body>
     <!-- Шапка сторінки -->
@@ -29,9 +31,10 @@
           <a href="./index.html" class="logo link"
             >Web<span class="logo-studio">Studio</span></a
           >
+          <!-- Navigation -->
           <ul class="header-list list">
             <li class="header-item">
-              <a href="./index.html" class="header-link link current">Studio</a>
+              <a href="./index.html" class="header-link link  current">Studio</a>
             </li>
             <li class="header-item">
               <a href="./portfolio.html" class="header-link link">Portfolio</a>
@@ -41,7 +44,13 @@
             </li>
           </ul>
         </nav>
-
+        <!-- Burger -->
+        <button type="button" class="mobile-menu-open js-open-menu">
+          <svg class="mobile-menu-open_icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
+        <!-- Contact -->
         <address class="header-address">
           <ul class="header-contacts list">
             <li class="header-contact">
@@ -60,6 +69,10 @@
         </address>
       </div>
     </header>
+    
+    <!-- Новое мобильное меню -->
+
+
 
     <!-- Унікальний контент сторінки -->
     <!-- Секція 1 -->
@@ -67,7 +80,9 @@
       <section class="hero background">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button class="open-btn" data-modal-open type="button">Order Service</button>
+          <button class="open-btn" data-modal-open type="button">
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -136,17 +151,18 @@
           <h2 class="section-title">What are we doing</h2>
           <ul class="section-product-list list">
             <li class="image">
-              <img
+              <img  srcset="./images/image-1.jpg 1x, ./images/image-1@2x.jpg 2x"
                 src="./images/image-1.jpg"
-                alt="monitor on the table with the website open"
-                width="360"
-              />
+                alt="computer"
+                width="360" />
             </li>
             <li class="image">
-              <img src="./images/image-2.jpg" alt="phones" width="360" />
+              <img srcset="./images/image-2.jpg 1x, ./images/image-2@2x.jpg 2x"
+              src="./images/image-2.jpg" alt="phones" width="360" />
             </li>
             <li class="image">
-              <img src="./images/image-3.jpg" alt="screen" width="360" />
+              <img srcset="./images/image-3.jpg 1x, ./images/image-3@2x.jpg 2x"
+              src="./images/image-3.jpg" alt="screen" width="360" />
             </li>
           </ul>
         </div>
@@ -159,7 +175,7 @@
           <h2 class="section-title-team">Our Team</h2>
           <ul class="list-lead">
             <li class="personal">
-              <img
+              <img srcset="./images/teamcard-1.jpg 1x, ./images/teamcard-1@2x.jpg 2x"
                 src="./images/teamcard-1.jpg"
                 alt="team_photo-1"
                 width="264"
@@ -200,7 +216,7 @@
               </div>
             </li>
             <li class="personal">
-              <img
+              <img srcset="./images/teamcard-2.jpg 1x, ./images/teamcard-2@2x.jpg 2x"
                 src="./images/teamcard-2.jpg"
                 class="colleauge-img"
                 alt="team_photo-2"
@@ -242,7 +258,7 @@
               </div>
             </li>
             <li class="personal">
-              <img
+              <img srcset="./images/teamcard-3.jpg 1x, ./images/teamcard-3@2x.jpg 2x"
                 src="./images/teamcard-3.jpg"
                 alt="team_photo-3"
                 width="264"
@@ -283,7 +299,7 @@
               </div>
             </li>
             <li class="personal">
-              <img
+              <img srcset="./images/teamcard-4.jpg 1x,./images/teamcard-4@2x.jpg 2x"
                 src="./images/teamcard-4.jpg"
                 alt="team_photo-4"
                 width="264"
@@ -386,11 +402,11 @@
       <div class="container social-icons">
         <div class="footer-logo">
           <a href="./index.html" class="logo map link"
-          >Web<span class="footer-studio">Studio</span></a
+            >Web<span class="footer-studio">Studio</span></a
           >
           <p class="footer-text">
-          Increase the flow of customers and sales for your business with
-          digital marketing & growth solutions.
+            Increase the flow of customers and sales for your business with
+            digital marketing & growth solutions.
           </p>
         </div>
         <div class="footer-social">
@@ -399,21 +415,21 @@
             <li class="footer-social-list">
               <a href="#" class="footer-social-link">
                 <svg class="networks" width="24" height="24">
-                <use href="./images/icons.svg#icon-instagram"></use>
+                  <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="footer-social-list">
               <a href="#" class="footer-social-link">
                 <svg class="networks" width="24" height="24">
-                <use href="./images/icons.svg#icon-twitter"></use>
+                  <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="footer-social-list">
               <a href="#" class="footer-social-link">
                 <svg class="networks" width="24" height="24">
-                <use href="./images/icons.svg#icon-facebook"></use>
+                  <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
@@ -433,7 +449,12 @@
           <p class="footer-form-text">Subscribe</p>
           <form class="contact-form">
             <label class="cont-form-field">
-              <input type="email" class="footer-form-input" placeholder="E-mail" name="user-e-mail"/>
+              <input
+                type="email"
+                class="footer-form-input"
+                placeholder="E-mail"
+                name="user-e-mail"
+              />
             </label>
             <button type="submit" class="contact-form-btn">
               Subscribe
@@ -446,7 +467,7 @@
       </div>
     </footer>
 
-<!-- Modal Window -->
+    <!-- Modal Window -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close-btn" data-modal-close type="button">
@@ -457,60 +478,106 @@
 
         <!-- Modal Form -->
 
-        <p class="modal-form-text">Leave your contacts and we will call you back</p>
+        <p class="modal-form-text">
+          Leave your contacts and we will call you back
+        </p>
 
         <form class="modal-form">
           <div class="modal-form-div">
-              <label class="modal-form-field" for="user-name">Name</label>
-              <div class="modal-form-input-wrapper">
-                <input type="text" name="user-name" class="modal-form-input" id="user-name"/>
-                  <svg class="modal-form-icon" width="18" height="24">
-                    <use href="./images/icons.svg#icon-person"></use>
-                  </svg>
-              </div>
+            <label class="modal-form-field" for="user-name">Name</label>
+            <div class="modal-form-input-wrapper">
+              <input
+                type="text"
+                name="user-name"
+                class="modal-form-input"
+                id="user-name"
+              />
+              <svg class="modal-form-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
           </div>
           <div class="modal-form-div">
-            <label class="modal-form-field" for="user-phone">
-              Phone</label>
-              <div class="modal-form-input-wrapper">
-                <input type="tel" name="user-phone" class="modal-form-input" id="user-phone">
-                  <svg class="modal-form-icon" width="18" height="24">
-                    <use href="./images/icons.svg#icon-phone"></use>
-                  </svg>
-              </div>
+            <label class="modal-form-field" for="user-phone"> Phone</label>
+            <div class="modal-form-input-wrapper">
+              <input
+                type="tel"
+                name="user-phone"
+                class="modal-form-input"
+                id="user-phone"
+              />
+              <svg class="modal-form-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
           </div>
           <div class="modal-form-div">
             <label class="modal-form-field" for="user-email">Email </label>
-              <div class="modal-form-input-wrapper">
-                <input type="email" name="user-email" class="modal-form-input" id="user-email">
-                  <svg class="modal-form-icon" width="18" height="24">
-                    <use href="./images/icons.svg#icon-email"></use>
-                  </svg>
-              </div>
+            <div class="modal-form-input-wrapper">
+              <input
+                type="email"
+                name="user-email"
+                class="modal-form-input"
+                id="user-email"
+              />
+              <svg class="modal-form-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
           </div>
           <div class="modal-form-comment">
             <label class="modal-form-field" for="user-comment">Comment</label>
-              <textarea name="user-comment" class="modal-form-message" placeholder="Text input" id="user-comment"></textarea>
+            <textarea
+              name="user-comment"
+              class="modal-form-message"
+              placeholder="Text input"
+              id="user-comment"
+            ></textarea>
           </div>
-                   
-<!--  checkbox  -->
+
+          <!--  checkbox  -->
 
           <div class="modal-checkbox">
-              <input id="user-privacy" type="checkbox" name="user-privacy" class="modal-form-check visually-hidden" value="true">
-              <label for="user-privacy" class="modal-form-check-desk">
-                <span class="modal-form-face-span">
-                  <svg class="form-check-icon" width="10" height="8">
-                    <use href="./images/icons.svg#icon-vector"></use>
-                  </svg>
-                </span>
-                I accept the terms and conditions of the &nbsp;<a href="" class="privacy-policy">Privacy Policy</a>
-              </label>
+            <input
+              id="user-privacy"
+              type="checkbox"
+              name="user-privacy"
+              class="modal-form-check visually-hidden"
+              value="true"
+            />
+            <label for="user-privacy" class="modal-form-check-desk">
+              <span class="modal-form-face-span">
+                <svg class="form-check-icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-vector"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the &nbsp;<a
+                href=""
+                class="privacy-policy"
+                >Privacy Policy</a
+              >
+            </label>
           </div>
           <button type="submit" class="modal-form-submit">Send</button>
         </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu"></script>
   </body>
+<!-- =========================  ====================== -->
+  <button
+  type="button"
+  class="menu-button is-open"
+  aria-expanded="true"
+  aria-controls="menu-container"
+  data-menu-button
+>
+  <svg width="30" height="30" aria-label="mobile menu swich">
+    <use class="icon-cross" href=""></use>
+    <use class="icon-menu" href=""></use>
+  </svg>
+
 </html>
+<!-- ==================  ========================== -->
 

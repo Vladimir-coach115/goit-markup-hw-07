@@ -48,13 +48,29 @@ img {
 .button {
   cursor: pointer;
 }
-.container {
+.visually-hidden {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+}
+
+/* .container {
   width: 1158px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
-}
+} */
+
+
+
+
 
 /* body */
 
@@ -64,6 +80,39 @@ body {
   background-color: var(--primary-white-color);
 }
 
+/* 1x - 96dpi
+2x - 192dpi
+3x  - 288dpi точок на дюйм*/
+
+
+/* === Адаптина верстка === */
+
+.container {
+  max-width: 428px;
+  padding-right: 16px;
+  padding-left: 16px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+ padding-left: 15px;
+  padding-right: 15px;
+  }
+}
 
 /*Шапка сторінки */
 
@@ -71,7 +120,6 @@ body {
   border-bottom: 1px solid #e7e9fc;
   box-shadow:  2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08); 
 }
-
 .header .container {
   display: flex;
   margin: 0 auto;
@@ -80,7 +128,8 @@ body {
   display: flex;
   align-items: center;
   margin-left: 0; 
-}   
+}  
+ 
 /* Логотип */
 
 .logo {
@@ -98,28 +147,17 @@ body {
 .logo-studio {
   color: var(--primary-text-color);
 }
+
+/* Посилання */
+
 .header-list {
   display: flex;
   gap: 40px;
   margin: 0;
-  }
+}
 .header-link {
   padding: 24px 0;
 }
-/* address */
-
-.header-address {
-  margin-left: auto;
-}
-.header-contacts {
-  display: flex;
-  gap: 40px;
-  padding-top: 24px;
-  padding-bottom: 24px; 
-}
-
-/* Посилання */
-
 .header-link {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -135,6 +173,8 @@ body {
 .header-link:focus {
   color: var(--accent-color);
 }
+
+/* Підкреслення */
 .current {
   position: relative;
   color: var(--accent-color);
@@ -149,13 +189,21 @@ body {
   background-color: var(--accent-color);
   border-radius: 2px;
  }
-/* Адреса */
 
+/* Адреса */
 .header-address {
+  margin-left: auto;
   font-style: normal;
+}
+.header-contacts {
+  display: flex;
+  gap: 40px;
+  padding-top: 24px;
+  padding-bottom: 24px; 
 }
 .header-contact-link {
   text-decoration: none;
+  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -176,11 +224,45 @@ body {
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-  url("../images/people-working.jpg");
+  url("../images/people-working-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; 
 }
+/* @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  .background {
+    background-image: url("../images/people-working-mobile@2x.jpg");
+  }
+} */
+
+/* @media screen and (min-width: 768px) {
+  .background {
+    background-image: url("../images/people-working-tablet.jpg")
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .background {
+    background-image: url("../images/people-working-tablet@2x.jpg");
+  }
+} */
+
+/* @media screen and (min-width: 1158px) {
+  .background {
+    background-image: 
+    url("../images/people-working-desktop.jpg");
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1158px),
+  screen and (min-resolution: 192dpi) and (min-width: 1158px),
+  screen and (min-resolution: 2dppx) and (min-width: 1158px) {
+  .background {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-working-desktop@2x.jpg");
+  }
+} */
 
 .hero {
   width: 1440px;
