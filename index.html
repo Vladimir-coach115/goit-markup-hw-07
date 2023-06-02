@@ -19,15 +19,16 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <!-- <link rel="stylesheet" href="./css/mobile.css" />
     <link rel="stylesheet" href="./css/tablet.css" />
-    <link rel="stylesheet" href="./css/desktop.css" />
+    <link rel="stylesheet" href="./css/desktop.css" /> -->
   </head>
   <body>
     <!-- Шапка сторінки -->
 
     <header class="header">
       <div class="container">
-        <nav class="header-nav">
+        <nav class="header-page">
           <a href="./index.html" class="logo link"
             >Web<span class="logo-studio">Studio</span></a
           >
@@ -44,13 +45,15 @@
             </li>
           </ul>
         </nav>
-        <!-- Burger -->
+
+        <!-- Burger menu -->
         <button type="button" class="mobile-menu-open js-open-menu">
-          <svg class="mobile-menu-open_icon" width="32" height="22">
+          <svg class="mobile-menu-open_icon" width="32" height="22" aria-label="mobile menu swich">
             <use href="./images/icons.svg#icon-burger"></use>
           </svg>
         </button>
-        <!-- Contact -->
+
+         <!-- Contact -->
         <address class="header-address">
           <ul class="header-contacts list">
             <li class="header-contact">
@@ -564,20 +567,34 @@
     </div>
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu"></script>
+
+    <!-- === Mobile menu === -->
+    
+
   </body>
 <!-- =========================  ====================== -->
-  <button
+  
+  
+</html>
+<!-- ==================  ========================== -->
+
+<!-- <svg width="30" height="30" aria-label="mobile menu swich">
+    <use class="icon-cross" href=""></use>
+    <use class="icon-menu" href=""></use>
+  </svg> -->
+
+  <!-- <button type="button" class="data-menu-button is-open"
+          data-menu-button>
+          <svg class="mobile-menu-open_icon" width="32" height="22" aria-label="mobile menu swich">
+            <use class="icon-menu" href="./images/icons.svg#icon-burger"></use>
+            <use class="icon-cross" href="./images/icons.svg#icon-cross"></use>
+          </svg>
+        </button> -->
+
+        <button
   type="button"
   class="menu-button is-open"
   aria-expanded="true"
   aria-controls="menu-container"
   data-menu-button
 >
-  <svg width="30" height="30" aria-label="mobile menu swich">
-    <use class="icon-cross" href=""></use>
-    <use class="icon-menu" href=""></use>
-  </svg>
-
-</html>
-<!-- ==================  ========================== -->
-

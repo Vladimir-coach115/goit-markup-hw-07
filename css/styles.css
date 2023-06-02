@@ -109,8 +109,8 @@ body {
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
- padding-left: 15px;
-  padding-right: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -124,7 +124,7 @@ body {
   display: flex;
   margin: 0 auto;
 }
-.header-nav {
+.header-page {
   display: flex;
   align-items: center;
   margin-left: 0; 
@@ -190,6 +190,26 @@ body {
   border-radius: 2px;
  }
 
+/* ==== Mobile menu buttom === */
+.mobile-menu-open   {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+/* .data-menu-button .icon-cross {
+  display: none;
+} 
+.data-menu-button.is-open .icon-cross {
+  display: block;
+}
+.data-menu-button.is-open .icon-menu {
+  display: none;
+} */
+
+
+
 /* Адреса */
 .header-address {
   margin-left: auto;
@@ -215,6 +235,9 @@ body {
 .header-contact-link:focus {
   color: var(--accent-color);
 }
+
+
+
 
 /* 1 секція */
 
